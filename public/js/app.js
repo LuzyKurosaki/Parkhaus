@@ -37781,7 +37781,7 @@ var render = function () {
             "v-btn",
             {
               attrs: {
-                disabled: _vm.form.license_plate.length <= 0,
+                disabled: _vm.license_plate.length <= 0,
                 loading: _vm.submitting,
               },
               on: {
