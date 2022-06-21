@@ -5,7 +5,7 @@
         </v-card-title>
         <v-card-text>
             <v-text-field :error-messages="error ? error : ''" label="Kennzeichen" v-model="license_plate" />
-            <v-btn :loading="submitting" @click="submit()">
+            <v-btn :disabled="form.license_plate.length <= 0" :loading="submitting" @click="submit()">
                  Ticket Einlesen
             </v-btn>
         </v-card-text>

@@ -5,7 +5,7 @@
         </v-card-title>
         <v-card-text>
             <v-text-field label="Kennzeichen" v-model="form.license_plate" />
-            <v-btn :loading="submitting" @click="submit">
+            <v-btn :disabled="form.license_plate.length <= 0" :loading="submitting" @click="submit">
                 Ticket lösen
             </v-btn>
         </v-card-text>

@@ -37716,7 +37716,13 @@ var render = function () {
           _vm._v(" "),
           _c(
             "v-btn",
-            { attrs: { loading: _vm.submitting }, on: { click: _vm.submit } },
+            {
+              attrs: {
+                disabled: _vm.form.license_plate.length <= 0,
+                loading: _vm.submitting,
+              },
+              on: { click: _vm.submit },
+            },
             [_vm._v("\n            Ticket lösen\n        ")]
           ),
         ],
@@ -37774,7 +37780,10 @@ var render = function () {
           _c(
             "v-btn",
             {
-              attrs: { loading: _vm.submitting },
+              attrs: {
+                disabled: _vm.form.license_plate.length <= 0,
+                loading: _vm.submitting,
+              },
               on: {
                 click: function ($event) {
                   return _vm.submit()
